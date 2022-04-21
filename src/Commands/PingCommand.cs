@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace TelegramBotTemplate.Commands
 {
@@ -10,7 +10,7 @@ namespace TelegramBotTemplate.Commands
 
         public bool InternalCommand => false;
 
-        public async Task Execute(IChatService chatService, long chatId, int userId, int messageId, string? commandText)
+        public async Task Execute(IChatService chatService, long chatId, long userId, int messageId, string? commandText)
         {
             await chatService.SendMessage(chatId, "pong");
         }
